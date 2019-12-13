@@ -16,21 +16,22 @@ import main from "./views";
 import app from "./views/app";
 import user from "./views/user";
 import error from "./views/error";
+import { getToken } from './services/auth'
 
 const AuthRoute = ({ component: Component, authUser, ...rest }) => (
   <Route
     {...rest}
     render={props =>
-      authUser ? (
+      getToken() ? (
         <Component {...props} />
       ) : (
-        <Redirect
-          to={{
-            pathname: "/user/login",
-            state: { from: props.location }
-          }}
-        />
-      )
+          <Redirect
+            to={{
+              pathname: "/user/login",
+              state: { from: props.location }
+            }}
+          />
+        )
     }
   />
 );

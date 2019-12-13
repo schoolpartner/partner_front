@@ -28,8 +28,8 @@ module.exports = {
   "user.username": "Nome",
 
   /* 03.Menu */
-  "menu.app": "Inicio",
-  "menu.dashboards": "Dashboards",
+  "menu.app": "Home",
+  "menu.dashboards": "Página Inicial",
   "menu.gogo": "Gogo",
   "menu.start": "Start",
   "menu.second-menu": "Second Menu",

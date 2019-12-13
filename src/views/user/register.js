@@ -8,18 +8,16 @@ import IntlMessages from "../../helpers/IntlMessages";
 import { Colxx } from "../../components/common/CustomBootstrap";
 
 class Register extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      email: "",
-      password: "",
-      name: ""
-    };
+  state = {
+    email: "",
+    password: "",
+    name: ""
   }
 
-  onUserRegister() {
-    if (this.state.email !== "" && this.state.password !== "") {
-      this.props.history.push("/");
+  onUserRegister = e => {
+    e.preventDefault()
+    if (!!this.state.email && !!this.state.password && !!this.state.name) {
+      this.props.registerUser(this.state, this.props.history)
     }
   }
 
@@ -49,17 +47,34 @@ class Register extends Component {
               <CardTitle className="mb-4">
                 <IntlMessages id="user.register" />
               </CardTitle>
-              <Form>
+              <Form
+                onSubmit={this.onUserRegister}
+              >
                 <Label className="form-group has-float-label mb-4">
-                  <Input type="name" defaultValue={this.state.name} />
+                  <Input
+                    type="name"
+                    name="name"
+                    onChange={this.handleChange}
+                    value={this.state.name}
+                  />
                   <IntlMessages id="user.fullname" />
                 </Label>
                 <Label className="form-group has-float-label mb-4">
-                  <Input type="email" defaultValue={this.state.email} />
+                  <Input
+                    type="email"
+                    name="email"
+                    onChange={this.handleChange}
+                    value={this.state.email}
+                  />
                   <IntlMessages id="user.email" />
                 </Label>
                 <Label className="form-group has-float-label mb-4">
-                  <Input type="password" />
+                  <Input
+                    type="password"
+                    name="password"
+                    onChange={this.handleChange}
+                    value={this.state.password}
+                  />
                   <IntlMessages
                     id="user.password"
                     defaultValue={this.state.password}
@@ -70,9 +85,9 @@ class Register extends Component {
                     color="primary"
                     className="btn-shadow"
                     size="lg"
-                    onClick={() => this.onUserRegister()}
+                    disabled={this.props.loading}
                   >
-                    <IntlMessages id="user.register-button" />
+                    {this.props.loading ? 'Carregando...' : <IntlMessages id="user.register-button" />}
                   </Button>
                 </div>
               </Form>
