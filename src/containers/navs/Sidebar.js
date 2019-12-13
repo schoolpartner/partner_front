@@ -305,6 +305,7 @@ class Sidebar extends Component {
               option={{ suppressScrollX: true, wheelPropagation: false }}
             >
               <Nav vertical className="list-unstyled">
+              
                 {menuItems &&
                   menuItems.map(item => {
                     return (

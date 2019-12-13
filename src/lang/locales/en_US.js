@@ -28,7 +28,7 @@ module.exports = {
   "user.username": "Nome",
 
   /* 03.Menu */
-  "menu.app": "Home",
+  "menu.app": "Inicio",
   "menu.dashboards": "Dashboards",
   "menu.gogo": "Gogo",
   "menu.start": "Start",
@@ -42,6 +42,7 @@ module.exports = {
   "menu.search" :"Search",
   "menu.docs": "Docs",
   "menu.blank-page": "Blank Page",
+  "menu.professores": "Professores",
 
  /* 04.Error Page */
  "pages.error-title": "Ooops... looks like an error occurred!",
