@@ -7,7 +7,7 @@ import {
 } from '../actions';
 
 const INIT_STATE = {
-    user: localStorage.getItem('user_id'),
+    user: null,
     loading: false
 };
 
@@ -20,9 +20,9 @@ export default (state = INIT_STATE, action) => {
         case REGISTER_USER:
             return { ...state, loading: true };
         case REGISTER_USER_SUCCESS:
-            return { ...state, loading: false, user: action.payload.uid };
+            return { ...state, loading: false };
         case LOGOUT_USER:
-            return { ...state ,user:null};
+            return { ...state, user: null };
         default: return { ...state };
     }
 }

@@ -29,7 +29,7 @@ module.exports = {
 
   /* 03.Menu */
   "menu.app": "Home",
-  "menu.dashboards": "Dashboards",
+  "menu.dashboards": "Página Inicial",
   "menu.gogo": "Gogo",
   "menu.start": "Start",
   "menu.second-menu": "Second Menu",

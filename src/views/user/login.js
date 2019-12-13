@@ -12,7 +12,9 @@ class Login extends Component {
     password: ""
   }
 
-  onUserLogin() {
+  onUserLogin = e => {
+    e.preventDefault()
+
     if (!!this.state.email && !!this.state.password) {
       this.props.loginUser(this.state, this.props.history);
     }
@@ -45,7 +47,9 @@ class Login extends Component {
               <CardTitle className="mb-4">
                 <IntlMessages id="user.login-title" />
               </CardTitle>
-              <Form>
+              <Form
+                onSubmit={this.onUserLogin}
+              >
                 <Label className="form-group has-float-label mb-4">
                   <Input
                     type="email"
@@ -75,9 +79,9 @@ class Login extends Component {
                     color="primary"
                     className="btn-shadow"
                     size="lg"
-                    onClick={() => this.onUserLogin()}
+                    disabled={this.props.loading}
                   >
-                    <IntlMessages id="user.login-button" />
+                    {this.props.loading ? 'Carregando...' : <IntlMessages id="user.login-button" />}
                   </Button>
                 </div>
               </Form>
