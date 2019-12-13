@@ -206,7 +206,7 @@ class TopNav extends Component {
           <MobileMenuIcon />
         </NavLink>
 
-        <div className="search" data-search-path="/app/pages/search">
+        {/* <div className="search" data-search-path="/app/pages/search">
           <Input
             name="searchKeyword"
             id="searchKeyword"
@@ -221,9 +221,9 @@ class TopNav extends Component {
           >
             <i className="simple-icon-magnifier" />
           </span>
-        </div>
+        </div> */}
 
-        <div className="d-inline-block">
+        {/* <div className="d-inline-block">
           <UncontrolledDropdown className="ml-2">
             <DropdownToggle
               caret
@@ -246,7 +246,7 @@ class TopNav extends Component {
               })}
             </DropdownMenu>
           </UncontrolledDropdown>
-        </div>
+        </div> */}
 
         <a className="navbar-logo" href="/">
           <span className="logo d-none d-xs-block" />
@@ -254,7 +254,7 @@ class TopNav extends Component {
         </a>
 
         <div className="ml-auto">
-          <div className="header-icons d-inline-block align-middle">
+          {/* <div className="header-icons d-inline-block align-middle">
             <div className="position-relative d-none d-none d-lg-inline-block">
               <a
                 className="btn btn-outline-primary btn-sm mb-2 mr-3"
@@ -278,11 +278,11 @@ class TopNav extends Component {
                 <i className="simple-icon-size-fullscreen d-block" />
               )}
             </button>
-          </div>
+          </div> */}
           <div className="user d-inline-block">
             <UncontrolledDropdown className="dropdown-menu-right">
               <DropdownToggle className="p-0" color="empty">
-                <span className="name mr-1">Sarah Kortney</span>
+                <span className="name mr-1">Ana Mária</span>
                 <span>
                   <img alt="Profile" src="/assets/img/profile-pic-l.jpg" />
                 </span>
