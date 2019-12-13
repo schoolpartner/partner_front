@@ -10,8 +10,14 @@ const data = [
         icon: "simple-icon-paper-plane",
         label: "Professores",
         to: "/app/professores"
-      }     
+      }    ,
+      {
+        icon: "simple-icon-paper-plane",
+        label: "Lista de Presença",
+        to: "/app/listaPresenca"
+      }  
     ]
   },
+
 ];
 export default data;

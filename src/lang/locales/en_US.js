@@ -43,6 +43,7 @@ module.exports = {
   "menu.docs": "Docs",
   "menu.blank-page": "Blank Page",
   "menu.professores": "Professores",
+  "menu.listaPresenca":'Lista de Presença',
 
  /* 04.Error Page */
  "pages.error-title": "Ooops... looks like an error occurred!",

@@ -1,10 +1,11 @@
 import React, { Component, Fragment } from "react";
-import { Row, Card, CardBody, Button } from "reactstrap";
+import { Row, Card, CardBody, Button, Modal, ModalBody, ModalHeader,ModalFooter } from "reactstrap";
 import IntlMessages from "../../../../helpers/IntlMessages";
 import { Colxx, Separator } from "../../../../components/common/CustomBootstrap";
 import Breadcrumb from "../../../../containers/navs/Breadcrumb";
 import { NavLink } from 'react-router-dom'
 export default class Start extends Component {
+
     render() {
         return (
             <Fragment>
@@ -21,10 +22,10 @@ export default class Start extends Component {
                     </Colxx>
                 </Row>
                 <Row>
-          
+
                     <Colxx xxs="12" className="mb-3">
                         <Card className="d-flex flex-row" >
-                        
+
                             <div className="pl-2 d-flex flex-grow-1 min-width-zero">
                                 <div className="card-body align-self-center d-flex flex-column flex-lg-row justify-content-between min-width-zero align-items-lg-center">
                                     <NavLink
@@ -79,7 +80,7 @@ export default class Start extends Component {
                     </Colxx>
 
                 </Row>
-            </Fragment >
+            </Fragment>
         )
     }
 }

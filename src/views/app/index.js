@@ -7,6 +7,7 @@ import gogo from "./gogo";
 import secondMenu from "./second-menu";
 import blankPage from "./blank-page";
 import Professores from './gestao/professores/';
+import ListaPresenca from './gestao/lista/'
 class App extends Component {
   render() {
     const { match } = this.props;
@@ -19,6 +20,7 @@ class App extends Component {
           <Route path={`${match.url}/second-menu`} component={secondMenu} />
           <Route path={`${match.url}/blank-page`} component={blankPage} />
           <Route path={`${match.url}/professores`} component={Professores} />
+          <Route path={`${match.url}/listaPresenca`} component={ListaPresenca} />
           <Redirect to="/error" />
         </Switch>
       </AppLayout>
