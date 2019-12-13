@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { Row, Card, CardBody, Button, Modal, ModalBody, ModalHeader, ModalFooter, Table, Badge, CardTitle, Input } from "reactstrap";
+import { Row, Card, CardBody, Button, Modal, ModalBody, ModalHeader, ModalFooter, Table, FormGroup, Badge, CardTitle, Input } from "reactstrap";
 import IntlMessages from "../../../../helpers/IntlMessages";
 import { Colxx, Separator } from "../../../../components/common/CustomBootstrap";
 import Breadcrumb from "../../../../containers/navs/Breadcrumb";
@@ -20,8 +20,21 @@ export default class Start extends Component {
                     <Colxx xxs={12}>
                         <Card>
                             <CardBody>
-                                <label>Informe o Código da Turma</label>
-                                <Input />
+                                <FormGroup row>
+                                    <Colxx xxs={6}>
+                                        <FormGroup>
+                                            <label>Informe a Data</label>
+
+                                            <Input />
+                                        </FormGroup>
+                                    </Colxx>
+                                    <Colxx xxs={6}>
+                                        <FormGroup>
+                                            <label>Informe o Código da Turma</label>
+                                            <Input />
+                                        </FormGroup>
+                                    </Colxx>
+                                </FormGroup>
                             </CardBody>
                         </Card>
                     </Colxx>
